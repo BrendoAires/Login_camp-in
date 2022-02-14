@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./src/css/reset.css">
+        <link rel="stylesheet" href="./src/css/style.css">
+
+        <title>Login</title>
+    </head>
+
+
+    <body>
+        
+        <main>
+            
+            <article>
+                <header>
+                    <img src="./src/img/logo.svg">
+                </header>
+                <div class="container">
+                <img src="./src/img/log-in.svg"><h1 class="login">Faça seu login</h1>
+                <h4>Enter with your information</h4>
+
+                <form class="form">
+                    <label for="email" class="label-email" aria-placeholder="your e-mail">E-mail</label>
+                    <input type="email" id="email" class="email" autocomplete="disabled">
+
+                    <label for="password" class="label-password">Password</label>
+                    <input type="password" id="password" class="password">
+                    <div class="check">
+                        <label class="ch-box">
+                        <input type="checkbox" name="ch" id="checkbox">
+                        <span></span>
+                        </label>
+                        
+                        <label for="checkbox" class="rememberme">Remember Me</label>
+                        <a href="#">Forgot my password</a>
+                    </div>
+
+                    <input type="button" class="button" value="Entrar">
+
+                    <a class="register" href="">Don't have an account? Register Now </a>
+
+                </form>
+                </div>
+            </article>
+
+            <aside>
+                
+            </aside>
+        </main>
+
+        <script src="./src/js/index.js"></script>
+    </body>
+
+</html>

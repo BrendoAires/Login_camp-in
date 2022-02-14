@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+$--ff-poppins: 'Poppins', sans-serif;
+$--ff-roboto: 'Roboto', sans-serif;
+
+
+
+$fw-poppins-400:400;
+$fw-poppins-500:500;
+$fw-poppins-600:600;
+
+$fw-roboto-400:400;
+$fw-roboto-500:500;
+
+
+$text-base: #afb6c2;
+$text-title: #d4ccb6;
+$background: #191816;
+$form-background: #24221f;
+$primary-color: #ffc632;
+
+html{
+    min-width: 375px;
+    background: $background;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+body{
+    width:100%;
+    height:100%;
+    background: $background;
+
+    header{
+        height:100px;
+        width:100%;
+        padding:30px 0 30px 50px;
+    }
+}
+
+main{
+    
+    margin:0 auto;
+    width: 100%;
+    height: 100%;
+
+    article{
+        img{margin:0 0 0 45px;}
+        h1, h4{
+            color:$text-title; 
+            font-family: $--ff-poppins;
+            
+        }
+        h1{
+            display: inline-block;
+            font-size: 1.8rem;
+            margin:10px;
+            font-weight: $fw-poppins-600;
+        }
+        h4{
+            margin:10px 0 0 45px;
+            font-weight: $fw-poppins-400;
+            
+        }
+
+        .form{
+            width:calc(90% - 45px);
+            height: 500px;
+            margin:0 auto;
+            margin-top:30px;
+            display: flex;
+            flex-direction: column;
+            //padding: 20px;
+
+            .label-password{
+                margin-top:30px;
+            }
+                label{
+                    color: $text-title;
+                    font-family: $--ff-poppins;
+                    margin: 10px 0;
+                    font-size:.8rem;
+                    font-weight: $fw-poppins-500;
+
+                    
+
+                }
+
+                input{
+                    outline: 0;
+                    height:27px;
+                    background: transparent;
+                    border: 1px solid $text-base;
+                    border-radius: 4px;
+
+                    
+                }
+                .email{
+                    background-image: url("/src/img/mail.svg");
+                }
+                .password{
+                    background-image: url("/src/img/lock.svg");
+                    
+                }
+                .password, .email{
+                    transition: .2s;
+                    background-repeat: no-repeat;
+                    background-position-x: 2px;
+                    background-position-y: 4px;
+                }
+
+                .password:focus, .email:focus{
+                    border:1px solid $primary-color;
+                }
+
+                .password:focus{
+                    background-image: url("/src/img/lock-focus.svg");
+                }
+                .email:focus{
+                    background-image: url("/src/img/mail-focus.svg");
+                }
+                
+                input[type="email"], input[type="password"]{
+
+                    color:$text-base;
+                    font-size:1rem;
+                    padding-left: 30px;
+                    
+                }
+                .check{
+                    display: flex;
+                    position: relative;
+               
+                    .ch-box {
+                        input{
+                            display: none;
+                            
+
+                            &:checked + span{
+                                background-image: url("/src/img/check.svg");
+                                background-color: $primary-color;
+                                background-position-x: center;
+                            }
+                        }
+
+                            span{
+                                width: 20px;
+                                height: 20px;
+                                display: block;
+                                border: 1px solid $text-base;
+                                border-radius: 2px;
+                                transition: .2s;
+                            }
+                    }
+                    
+
+                    .rememberme{
+                        color: $text-base;
+                        font-family: $--ff-poppins;
+                        font-size: 0.8rem;
+                        display: inline;
+                        margin-left: 10px;
+                    }
+                    a{
+                        position: absolute;
+                        float: right;
+                        right: 0;
+                        top:9px;
+                        color:$primary-color;
+                        font-family: $--ff-poppins;
+                        font-weight: $fw-poppins-600;
+                        font-size: .8rem;
+                        transition: .2s;
+
+                        &:hover{
+                            filter: brightness(.7);
+                        }
+
+                    }
+                }
+
+
+                .button{
+                    height: 40px;
+                    color: $background;
+                    font-family: $--ff-poppins;
+                    font-weight: $fw-poppins-600;
+                    background: $primary-color;
+                    //outline: 0;
+                    border: 0;
+                    margin: 20px 0 20px 0;
+                    transition: .2s;
+
+                    &:hover{
+                        filter: brightness(.7);
+                    }
+                }
+            }
+            .register{
+                color: $primary-color;
+                font-family: $--ff-poppins;
+                font-weight: $fw-poppins-500;
+                text-align: center;
+                transition: .2s;
+
+                &:hover{
+                    filter: brightness(.7);
+                }
+            }
+    }
+
+    
+}
+
+
+
+@media(min-width:1300px){
+    main{
+        display: flex;
+    }
+    header{
+        align-items: flex-start;
+        position: absolute;
+        top: 0;
+    }
+
+    article{
+        width: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .container{
+        background: $form-background;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .form{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    aside{
+        display: flex;
+       width: 50%;
+       height: 100vh;
+       background-size:cover;
+        background-repeat: no-repeat;
+        background-position: -40px;
+        top: 50px;
+        right: 0;
+        background-image: url("/src/img/side-image.jpg");
+    }
+
+}
+
