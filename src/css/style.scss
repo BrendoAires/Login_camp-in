@@ -189,6 +189,7 @@ main{
                     border: 0;
                     margin: 20px 0 20px 0;
                     transition: .2s;
+                    cursor: pointer;
 
                     &:hover{
                         filter: brightness(.7);

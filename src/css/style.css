@@ -176,6 +176,7 @@ main article .form .button {
   margin: 20px 0 20px 0;
   -webkit-transition: .2s;
   transition: .2s;
+  cursor: pointer;
 }
 
 main article .form .button:hover {
